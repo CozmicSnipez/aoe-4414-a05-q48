@@ -34,13 +34,13 @@ def average_pooling_ops(c_in, h_in, w_in, h_pool, w_pool, s, p):
     c_out = c_in  # Output channels same as input channels
 
     # Operations count
-    # Additions: each pooling operation involves (h_pool * w_pool - 1) additions
+    # Additions
     adds = c_out * h_out * w_out * (h_pool * w_pool - 1)
     
-    # Multiplications: no multiplications in average pooling
+    # Multiplications
     muls = 0
     
-    # Divisions: one division per pooling operation
+    # Divisions
     divs = c_out * h_out * w_out
 
     return c_out, h_out, w_out, adds, muls, divs
