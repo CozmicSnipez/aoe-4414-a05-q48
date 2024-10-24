@@ -15,8 +15,15 @@
 # Output:
 #  Prints the output channel count, output height, output width,
 #  and the number of additions, multiplications, and divisions performed.
+#
+# Written by Nick Davis
+# Other contributors: None
+#
+# This work is licensed under CC BY-SA 4.0
 
+# Import necessary modules
 import sys
+# import math
 
 # Helper function to find pooling layer output dimensions and operations count
 def average_pooling_ops(c_in, h_in, w_in, h_pool, w_pool, s, p):
