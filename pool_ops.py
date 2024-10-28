@@ -30,17 +30,11 @@ def average_pooling_ops(c_in, h_in, w_in, h_pool, w_pool, s, p):
     # Output dimensions (height and width)
     h_out = (h_in + 2 * p - h_pool) // s + 1
     w_out = (w_in + 2 * p - w_pool) // s + 1
-    
     c_out = c_in  # Output channels same as input channels
 
     # Operations count
-    # Additions
     adds = c_out * h_out * w_out * (h_pool * w_pool - 1)
-    
-    # Multiplications
     muls = 0
-    
-    # Divisions
     divs = c_out * h_out * w_out
 
     return c_out, h_out, w_out, adds, muls, divs
